@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:osnv/core/route/routename.dart';
+import 'package:osnv/features/account_setup/presentation/pages/create_pin.dart';
 import 'package:osnv/features/account_setup/presentation/pages/fill_profile.dart';
+import 'package:osnv/features/account_setup/presentation/pages/set_fingerprint_page.dart';
 import 'package:osnv/features/auth/register/presentation/page/create_account.dart';
 import 'package:osnv/features/auth/register/presentation/page/login_account.dart';
 import 'package:osnv/features/init/presentation/page/splash_page.dart';
@@ -26,6 +28,10 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => LoginAccount());
       case RouteNames.FillProfile:
         return MaterialPageRoute(builder: (_) => FillProfile());
+      case RouteNames.CreatePin:
+        return MaterialPageRoute(builder: (_) => CreatePin());
+      case RouteNames.SetFingerPrint:
+        return MaterialPageRoute(builder: (_)=> SetFingerprintPage());
       default:
         return _errorRoute();
     }

@@ -51,7 +51,7 @@ class SignUp extends StatelessWidget {
                 CustomDivider(text: "or"),
                 SignCustomButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, RouteNames.CreateAccount);
+                    Navigator.pushNamed(context, RouteNames.LoginAccount);
                   },
                   text: "Sign in with password",
                 ),
@@ -69,7 +69,7 @@ class SignUp extends StatelessWidget {
                               ..onTap =
                                   () => Navigator.pushNamed(
                                     context,
-                                    RouteNames.SplashPage,
+                                    RouteNames.CreateAccount,
                                   ),
                       ),
                     ],

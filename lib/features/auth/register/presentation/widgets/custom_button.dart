@@ -8,10 +8,13 @@ class SignCustomButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.text,
+    this.backgroundColor = AppColors.pagenation,
+
   });
 
   final VoidCallback onPressed;
   final String text;
+  final Color backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,7 @@ class SignCustomButton extends StatelessWidget {
             onPressed: onPressed,
             child: Text(text, style: buttonStyle),
             style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.pagenation,
+              backgroundColor: backgroundColor,
               padding: EdgeInsets.symmetric(vertical: appH(15))
             ),
           ),

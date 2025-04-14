@@ -6,5 +6,5 @@ class RouteNames{
   static const String LoginAccount = '/LoginAccount';
   static const String FillProfile = '/FillProfile';
   static const String CreatePin ='/CreatePin';
-
+  static const String SetFingerPrint = '/SetFingerPrint';
 }

@@ -38,4 +38,9 @@ TextStyle upTextStyle = TextStyle(
   fontSize: appH(24),
   fontWeight: FontWeight.bold,
 );
+TextStyle simpleText = TextStyle(
+  fontFamily: 'Urbanist',
+  fontSize: appH(18),
+);
+
 

@@ -1,11 +1,13 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:hive/hive.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:osnv/core/const/text_style.dart';
+import 'package:osnv/core/route/routename.dart';
 import 'package:osnv/features/auth/register/presentation/widgets/custom_button.dart';
 import 'package:osnv/features/auth/register/presentation/widgets/custom_textfield.dart';
 
@@ -90,107 +92,112 @@ class _FillProfileState extends State<FillProfile> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          height: appH(886),
-          width: appW(428),
-          child: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: appW(40),
-              vertical: appH(20),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Row(
-                  children: [
-                    IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
-                    Text("Fill Your Profile", style: upTextStyle),
-                  ],
-                ),
-                GestureDetector(
-                  onTap: _pickImage,
-                  child: CircleAvatar(
-                    radius: appW(80),
-                    backgroundImage:
-                        _imageFile != null ? FileImage(_imageFile!) : null,
-                    child:
-                        _imageFile == null
-                            ? Icon(Icons.camera_alt, size: 40)
-                            : null,
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Container(
+            height: appH(886),
+            width: appW(428),
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: appW(40),
+                vertical: appH(20),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Row(
+                    children: [
+                      IconButton(onPressed: () {Navigator.pop(context);}, icon: Icon(Icons.arrow_back)),
+                      Text("Fill Your Profile", style: upTextStyle),
+                    ],
                   ),
-                ),
-                CustomTextfield(
-                  controller: fullnameController,
-                  hintText: "Full name",
-                ),
-                CustomTextfield(
-                  controller: nicknameController,
-                  hintText: "Nick name",
-                ),
-                CustomTextfield(
-                  controller: dateController,
-                  hintText: "Date of Birth",
-                  readonly: true,
-                  onTab: () => _selectDate(context),
-                  suffixIcon: Icon(Icons.date_range),
-                ),
-                CustomTextfield(
-                  controller: emailController,
-                  hintText: "Email",
-                  suffixIcon: Icon(Icons.email),
-                ),
-                IntlPhoneField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: AppColors.textfiledcolor,
-                    hintText: 'Phone Number',
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.pagenation, width: 2),
-                      borderRadius: BorderRadius.circular(8),
+                  GestureDetector(
+                    onTap: _pickImage,
+                    child: CircleAvatar(
+                      radius: appW(80),
+                      backgroundImage:
+                          _imageFile != null ? FileImage(_imageFile!) : null,
+                      child:
+                          _imageFile == null
+                              ? Icon(Icons.camera_alt, size: 40)
+                              : null,
                     ),
                   ),
-                  initialCountryCode: 'US',
-                  onChanged: (phone) {
-                    print(
-                      phone.completeNumber,
-                    ); // Full number with country code
-                  },
-                ),
-                DropdownButtonFormField<String>(
-                  decoration: InputDecoration(
-                    hintText: "Gender",
-                    filled: true,
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.pagenation),
-                    ),
-                    focusColor: AppColors.trasperentblue,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide.none,
-                    ),
+                  CustomTextfield(
+                    controller: fullnameController,
+                    hintText: "Full name",
                   ),
-                  value: selectedGender,
-                  onChanged: (value) {
-                    setState(() {
-                      selectedGender = value;
-                    });
-                  },
-                  items:
-                      genderOptions.map((gender) {
-                        return DropdownMenuItem(
-                          value: gender,
-                          child: Text(gender),
-                        );
-                      }).toList(),
-                ),
-                SignCustomButton(onPressed: () {}, text: "Continue"),
-              ],
+                  CustomTextfield(
+                    controller: nicknameController,
+                    hintText: "Nick name",
+                  ),
+                  CustomTextfield(
+                    controller: dateController,
+                    hintText: "Date of Birth",
+                    readonly: true,
+                    onTab: () => _selectDate(context),
+                    suffixIcon: Icon(Icons.date_range),
+                  ),
+                  CustomTextfield(
+                    controller: emailController,
+                    hintText: "Email",
+                    suffixIcon: Icon(Icons.email),
+                  ),
+                  IntlPhoneField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: AppColors.textfiledcolor,
+                      hintText: 'Phone Number',
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.pagenation, width: 2),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                    initialCountryCode: 'US',
+                    onChanged: (phone) {
+                      print(
+                        phone.completeNumber,
+                      ); // Full number with country code
+                    },
+                  ),
+                  DropdownButtonFormField<String>(
+                    decoration: InputDecoration(
+                      hintText: "Gender",
+                      filled: true,
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: AppColors.pagenation),
+                      ),
+                      focusColor: AppColors.trasperentblue,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
+                    value: selectedGender,
+                    onChanged: (value) {
+                      setState(() {
+                        selectedGender = value;
+                      });
+                    },
+                    items:
+                        genderOptions.map((gender) {
+                          return DropdownMenuItem(
+                            value: gender,
+                            child: Text(gender),
+                          );
+                        }).toList(),
+                  ),
+                  Gap(appH(20)),
+                  SignCustomButton(onPressed: () {
+                    Navigator.pushNamed(context, RouteNames.CreatePin);
+                  }, text: "Continue"),
+                ],
+              ),
             ),
           ),
         ),
