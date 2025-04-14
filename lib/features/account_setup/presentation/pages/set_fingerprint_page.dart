@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:osnv/features/auth/register/presentation/widgets/custom_button.dart';
-
 import '../../../../core/const/text_style.dart';
 import '../../../../core/responsive/app_responsive.dart';
 
@@ -44,7 +41,7 @@ class SetFingerprintPage extends StatelessWidget {
               ),
 
               Row(children: [
-                SignCustomButton(onPressed: () { }, text: 'Next',),
+                // SignCustomButton(onPressed: () { }, text: 'Next',),
               ],)
             ],
           ),

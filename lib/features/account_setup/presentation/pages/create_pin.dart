@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:osnv/features/account_setup/presentation/widgets/pin_input_screen.dart';
 import 'package:osnv/features/auth/register/presentation/widgets/custom_button.dart';
-import 'package:pin_code_fields/pin_code_fields.dart';
 import '../../../../core/const/text_style.dart';
 import '../../../../core/responsive/app_responsive.dart';
 

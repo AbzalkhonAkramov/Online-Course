@@ -23,11 +23,11 @@ class SignCustomButton extends StatelessWidget {
         Expanded(
           child: ElevatedButton(
             onPressed: onPressed,
-            child: Text(text, style: buttonStyle),
             style: ElevatedButton.styleFrom(
               backgroundColor: backgroundColor,
               padding: EdgeInsets.symmetric(vertical: appH(15))
             ),
+            child: Text(text, style: buttonStyle),
           ),
         ),
       ],

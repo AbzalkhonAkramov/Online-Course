@@ -31,6 +31,7 @@ class _InitialPageState extends State<InitialPage> {
     }
   }
 
+  @override
   void dispose() {
     pageController.dispose();
     super.dispose();
@@ -59,16 +60,16 @@ class _InitialPageState extends State<InitialPage> {
                   Pages(
                     title:
                         'We provide the best learning courses & great mentors!',
-                    picpath: IconsPath.SplashLoad,
+                    picpath: IconsPath.Person1,
                   ),
                   Pages(
                     title: "Learn anytime and anywhere easily and conveniently",
-                    picpath: IconsPath.SplashIcon,
+                    picpath: IconsPath.Person2,
                   ),
                   Pages(
                     title:
                         "Let's improve your skills together with Elera right now!",
-                    picpath: IconsPath.SplashLoad,
+                    picpath: IconsPath.Person3,
                   ),
                 ],
               ),

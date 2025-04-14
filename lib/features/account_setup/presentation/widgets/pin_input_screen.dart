@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class PinInputScreen extends StatelessWidget {
+  const PinInputScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return  PinCodeTextField(

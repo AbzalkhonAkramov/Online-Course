@@ -23,6 +23,9 @@ class AuthButton extends StatelessWidget {
         Expanded(
           child: ElevatedButton(
             onPressed: onPressed,
+            style: ElevatedButton.styleFrom(
+              padding: EdgeInsets.symmetric(vertical: appH(16)),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -30,9 +33,6 @@ class AuthButton extends StatelessWidget {
                 Gap(10),
                 Text(text, style: buttonStyleblack),
               ],
-            ),
-            style: ElevatedButton.styleFrom(
-              padding: EdgeInsets.symmetric(vertical: appH(16)),
             ),
           ),
         ),

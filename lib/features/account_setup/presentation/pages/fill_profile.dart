@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hive/hive.dart';
@@ -15,7 +14,7 @@ import '../../../../core/const/colors.dart';
 import '../../../../core/responsive/app_responsive.dart';
 
 class FillProfile extends StatefulWidget {
-  FillProfile({super.key});
+  const FillProfile({super.key});
 
   @override
   State<FillProfile> createState() => _FillProfileState();
@@ -47,6 +46,7 @@ class _FillProfileState extends State<FillProfile> {
     });
   }
 
+  @override
   void dispose() {
     focusNode.dispose();
     super.dispose();
@@ -95,7 +95,7 @@ class _FillProfileState extends State<FillProfile> {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Container(
+          child: SizedBox(
             height: appH(886),
             width: appW(428),
             child: Padding(

@@ -37,7 +37,7 @@ class _LoginAccountState extends State<LoginAccount> {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Container(
+          child: SizedBox(
             height: appH(886),
             width: appW(428),
             child: Padding(

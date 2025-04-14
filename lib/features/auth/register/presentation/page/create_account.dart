@@ -38,7 +38,7 @@ class _CreateAccountState extends State<CreateAccount> {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Container(
+          child: SizedBox(
             height: appH(886),
             width: appW(428),
             child: Padding(

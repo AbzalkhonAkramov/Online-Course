@@ -21,7 +21,11 @@ class Pages extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               SvgPicture.asset(IconsPath.InitialBg),
-              SvgPicture.asset(picpath),
+              Container(
+
+                child: SvgPicture.asset(picpath,height: appH(400),
+                  width: appW(396),fit: BoxFit.fill, ),
+              ),
             ],
           ),
         ),
