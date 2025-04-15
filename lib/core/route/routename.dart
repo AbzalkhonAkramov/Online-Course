@@ -7,4 +7,10 @@ class RouteNames{
   static const String FillProfile = '/FillProfile';
   static const String CreatePin ='/CreatePin';
   static const String SetFingerPrint = '/SetFingerPrint';
+  static const String FingerprintSetupPage = '/FingerprintSetupPage';
+  static const String ForgotPasswordPage = '/ForgotPasswordPage';
+  static const String ForgotPasswordPin = '/ForgotPasswordPin';
+  static const String CreateNewPassword = '/CreateNewPassword';
+
+
 }

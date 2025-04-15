@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     // print(Responsive.screenWidth);
     // print(Responsive.screenHeight);
     return MaterialApp(
-      initialRoute: RouteNames.InitialPage,
+      initialRoute: RouteNames.CreateNewPassword,
       onGenerateRoute: AppRoute(context: context).onGenerateRoute,
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:osnv/core/route/routename.dart';
 import 'package:osnv/features/account_setup/presentation/widgets/pin_input_screen.dart';
 import 'package:osnv/features/auth/register/presentation/widgets/custom_button.dart';
 import '../../../../core/const/text_style.dart';
@@ -44,7 +45,9 @@ class CreatePin extends StatelessWidget {
                   ],
                 ),
               ),
-              SignCustomButton(onPressed: () {}, text: "Continue"),
+              SignCustomButton(onPressed: () {
+                Navigator.pushNamed(context, RouteNames.SetFingerPrint);
+              }, text: "Continue"),
             ],
           ),
         ),

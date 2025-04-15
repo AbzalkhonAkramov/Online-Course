@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
+import 'package:osnv/core/const/colors.dart';
+import 'package:osnv/core/const/icons_path.dart';
+import 'package:osnv/core/route/routename.dart';
+import 'package:osnv/features/account_setup/presentation/pages/fingerprint_setup_page.dart';
 import '../../../../core/const/text_style.dart';
 import '../../../../core/responsive/app_responsive.dart';
+import '../../../auth/register/presentation/widgets/custom_button.dart';
 
 class SetFingerprintPage extends StatelessWidget {
   const SetFingerprintPage({super.key});
@@ -34,15 +40,42 @@ class SetFingerprintPage extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: simpleText,
               ),
-              SvgPicture.asset(""),
+              SvgPicture.asset(IconsPath.FingerPrintIcon),
               Text(
-                "Please put your finger on the fingerprint scanner to get started.",                textAlign: TextAlign.center,
+                "Please put your finger on the fingerprint scanner to get started.",
+                textAlign: TextAlign.center,
                 style: simpleText,
               ),
 
-              Row(children: [
-                // SignCustomButton(onPressed: () { }, text: 'Next',),
-              ],)
+              Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Skip",
+                        style: TextStyle(color: AppColors.pagenation),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xffEBEFFE)
+                      ),
+                    ),
+                  ),
+                  Gap(20),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: () {FingerprintSetupPage();},
+                      child: Text(
+                        "Continue",
+                        style: TextStyle(color: Color(0xffEBEFFE)),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: AppColors.pagenation
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

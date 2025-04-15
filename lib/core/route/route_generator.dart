@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:osnv/core/route/routename.dart';
 import 'package:osnv/features/account_setup/presentation/pages/create_pin.dart';
 import 'package:osnv/features/account_setup/presentation/pages/fill_profile.dart';
+import 'package:osnv/features/account_setup/presentation/pages/fingerprint_setup_page.dart';
 import 'package:osnv/features/account_setup/presentation/pages/set_fingerprint_page.dart';
 import 'package:osnv/features/auth/register/presentation/page/create_account.dart';
 import 'package:osnv/features/auth/register/presentation/page/login_account.dart';
 import 'package:osnv/features/init/presentation/page/splash_page.dart';
 import '../../features/init/presentation/page/initial_page.dart';
 import "../../features/auth/register/presentation/page/signup.dart";
+import '../../features/resetPassword/presentation/pages/create_new_password.dart';
+import '../../features/resetPassword/presentation/pages/forgot_password_page.dart';
+import '../../features/resetPassword/presentation/pages/forgot_password_pin.dart';
 
 class AppRoute {
   BuildContext context;
@@ -31,7 +35,16 @@ class AppRoute {
       case RouteNames.CreatePin:
         return MaterialPageRoute(builder: (_) => CreatePin());
       case RouteNames.SetFingerPrint:
-        return MaterialPageRoute(builder: (_)=> SetFingerprintPage());
+        return MaterialPageRoute(builder: (_) => SetFingerprintPage());
+      case RouteNames.FingerprintSetupPage:
+        return MaterialPageRoute(builder: (_) => FingerprintSetupPage());
+      case RouteNames.ForgotPasswordPage:
+        return MaterialPageRoute(builder: (_) => ForgotPasswordPage());
+      case RouteNames.ForgotPasswordPin:
+        return MaterialPageRoute(builder: (_) => ForgotPasswordPin());
+      case RouteNames.CreateNewPassword:
+        return MaterialPageRoute(builder: (_) => CreateNewPassword());
+
       default:
         return _errorRoute();
     }

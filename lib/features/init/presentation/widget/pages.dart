@@ -18,14 +18,10 @@ class Pages extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: appW(34)),
           child: Stack(
-            alignment: Alignment.center,
+            alignment: Alignment.bottomCenter,
             children: [
               SvgPicture.asset(IconsPath.InitialBg),
-              Container(
-
-                child: SvgPicture.asset(picpath,height: appH(400),
-                  width: appW(396),fit: BoxFit.fill, ),
-              ),
+              Image.asset(picpath,height: appH(400),width: appW(363),fit: BoxFit.fill, ),
             ],
           ),
         ),
