@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../const/text_style.dart';
 
 class BackAppbar extends StatelessWidget {
-  BackAppbar({super.key, required this.text, this.icon, this.onTab});
+  const BackAppbar({super.key, required this.text, this.icon, this.onTab});
 
   final IconData? icon;
   final String text;

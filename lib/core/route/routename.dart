@@ -11,6 +11,6 @@ class RouteNames{
   static const String ForgotPasswordPage = '/ForgotPasswordPage';
   static const String ForgotPasswordPin = '/ForgotPasswordPin';
   static const String CreateNewPassword = '/CreateNewPassword';
-
+  static const String FirstPage = '/FirstPage';
 
 }
