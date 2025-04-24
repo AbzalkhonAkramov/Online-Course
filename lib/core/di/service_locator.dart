@@ -3,7 +3,7 @@ import 'package:get_it/get_it.dart';
 import 'package:osnv/features/authentication/data/datasource/auth_remote_datasourse.dart';
 import 'package:osnv/features/authentication/data/repo/repo.dart';
 import 'package:osnv/features/authentication/domain/usecase/usecase.dart';
-import 'package:osnv/features/authentication/presentation/BloC/auth_bloc.dart';
+import 'package:osnv/features/authentication/presentation/BloC/auth/auth_bloc.dart';
 
 import '../../features/authentication/domain/repo/repo.dart';
 

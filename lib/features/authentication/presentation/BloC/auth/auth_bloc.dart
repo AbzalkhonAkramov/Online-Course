@@ -3,7 +3,7 @@ import 'package:meta/meta.dart';
 import 'package:osnv/features/authentication/domain/entity/user_entity.dart';
 import 'package:osnv/features/authentication/domain/usecase/usecase.dart';
 
-part 'auth_event.dart';
+part '../auth_event.dart';
 part 'auth_state.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {

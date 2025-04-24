@@ -7,7 +7,7 @@ import 'package:osnv/core/const/text_style.dart';
 import 'package:osnv/core/responsive/app_responsive.dart';
 
 import '../../../../../core/route/routename.dart';
-import '../../BloC/auth_bloc.dart';
+import '../../BloC/auth/auth_bloc.dart';
 import '../../widgets/auth_via.dart';
 import '../../widgets/custom_divider.dart';
 import '../../widgets/custom_textfield.dart';
