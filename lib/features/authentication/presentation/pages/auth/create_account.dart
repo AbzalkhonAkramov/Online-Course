@@ -99,7 +99,8 @@ class _CreateAccountState extends State<CreateAccount> {
                       if (state is AuthSuccess) {
                         Navigator.pushNamed(
                           context,
-                          RouteNames.FillProfile,
+                          RouteNames.VerifyPasscode,
+                          arguments: state.getUser.userId
                         );
                       }
                     },

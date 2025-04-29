@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:osnv/features/authentication/presentation/BloC/auth/auth_bloc.dart';
+import 'package:osnv/features/authentication/presentation/BloC/verify_code/verify_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'app.dart';
 import 'core/di/service_locator.dart';
@@ -14,7 +15,10 @@ Future<void> main() async {
   await setup();
   runApp(
     MultiBlocProvider(
-      providers: [BlocProvider<AuthBloc>(create: (context) => sl<AuthBloc>())],
+      providers: [
+        BlocProvider<AuthBloc>(create: (context) => sl<AuthBloc>()),
+        BlocProvider<VerifyBloc>(create: (context) => sl<VerifyBloc>()),
+      ],
       child: MyApp(),
     ),
   );

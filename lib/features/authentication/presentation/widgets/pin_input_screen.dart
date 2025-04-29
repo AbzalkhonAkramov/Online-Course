@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-class PinInputScreen extends StatelessWidget {
-  const PinInputScreen({super.key});
+class PinInputScreen extends StatefulWidget {
+  PinInputScreen({super.key,required this.passcodeController,});
+  TextEditingController passcodeController;
+  @override
+  State<PinInputScreen> createState() => _PinInputScreenState();
+}
+
+class _PinInputScreenState extends State<PinInputScreen> {
+
 
   @override
   Widget build(BuildContext context) {
     return  PinCodeTextField(
+      controller: widget.passcodeController,
       appContext: context,
       length: 4,
       obscureText: true,

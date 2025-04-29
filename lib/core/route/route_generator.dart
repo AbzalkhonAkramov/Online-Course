@@ -4,6 +4,7 @@ import 'package:osnv/features/authentication/presentation/pages/account_setup/fi
 import 'package:osnv/features/authentication/presentation/pages/auth/create_account.dart';
 import 'package:osnv/features/authentication/presentation/pages/auth/login_account.dart';
 import 'package:osnv/features/authentication/presentation/pages/auth/signup.dart';
+import 'package:osnv/features/authentication/presentation/pages/auth/verify_passcode.dart';
 
 import '../../features/authentication/presentation/pages/account_setup/create_pin.dart';
 import '../../features/authentication/presentation/pages/account_setup/fingerprint_setup_page.dart';
@@ -48,6 +49,9 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => CreateNewPassword());
       case RouteNames.FirstPage:
         return MaterialPageRoute(builder: (_) => FirstPage());
+      case RouteNames.VerifyPasscode:
+        final userid = routesettings.arguments;
+        return MaterialPageRoute(builder: (_) => VerifyPasscode(userid));
 
       default:
         return _errorRoute();
