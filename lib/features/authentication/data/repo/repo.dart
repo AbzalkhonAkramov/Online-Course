@@ -13,8 +13,8 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Future<AuthTokenModel> verifyCode({required code, required user_id}) {
-       return remoteDatasourse.verifyCode(code: code, user_id: user_id);
+  Future<AuthTokenModel> verifyCode({required code, required userId}) {
+       return remoteDatasourse.verifyCode(code: code, userId: userId);
   }
 
 

@@ -1,13 +1,13 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:osnv/features/authentication/domain/entity/user_entity.dart';
-import 'package:osnv/features/authentication/domain/usecase/usecase.dart';
+import 'package:osnv/features/authentication/domain/usecase/auth_email_with_password_usecase.dart';
 
 part '../auth_event.dart';
 part 'auth_state.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  final RegisterWithEmail registerWithEmail;
+  final AuthRegisterWithEmailUsecase registerWithEmail;
 
   AuthBloc(this.registerWithEmail) : super(AuthInitial()) {
     on<AuthEvent>((event, emit) async {

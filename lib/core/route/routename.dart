@@ -13,5 +13,8 @@ class RouteNames{
   static const String CreateNewPassword = '/CreateNewPassword';
   static const String FirstPage = '/FirstPage';
   static const String VerifyPasscode = '/VerifyPasscode';
+  static const String CourseDetailPage = '/CourseDetailPage';
+  static const String TopMentorsPage = '/TopMentorsPage';
+  static const String SearchPage = '/SearchPage';
 
 }

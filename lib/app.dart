@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
     // print(Responsive.screenWidth);
     // print(Responsive.screenHeight);
     return MaterialApp(
-      initialRoute: RouteNames.CreateAccount,
+      // initialRoute: RouteNames.CreateAccount,
+      // initialRoute: RouteNames.CourseDetailPage,
+      // initialRoute: RouteNames.SearchPage,
       onGenerateRoute: AppRoute(context: context).onGenerateRoute,
     );
   }

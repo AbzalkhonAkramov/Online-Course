@@ -6,7 +6,7 @@ class VerifyCodeUsecase{
 
   VerifyCodeUsecase({required this.repository});
 
-  Future<AuthToken> call({required int code,required int user_id}) {
-    return repository.verifyCode(code: code, user_id: user_id);
+  Future<AuthToken> call({required int code,required int userId}) {
+    return repository.verifyCode(code: code, userId: userId);
   }
 }

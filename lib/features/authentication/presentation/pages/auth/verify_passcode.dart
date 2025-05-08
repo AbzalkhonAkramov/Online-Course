@@ -22,9 +22,9 @@ class _VerifyPasscodeState extends State<VerifyPasscode> {
 
   Future<void> verified() async {
     final passcode = int.parse(passcodeController.text);
-    final user_id = widget.userid;
+    final userId = widget.userid;
     context.read<VerifyBloc>().add(
-      VerifyEvent(user_id: user_id, code: passcode),
+      VerifyEvent(userId: userId, code: passcode),
     );
   }
 

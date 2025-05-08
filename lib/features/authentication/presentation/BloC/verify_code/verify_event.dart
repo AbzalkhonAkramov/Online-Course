@@ -3,7 +3,7 @@ part of 'verify_bloc.dart';
 @immutable
 class VerifyEvent {
   final int code;
-  final int user_id;
+  final int userId;
 
-  VerifyEvent({required this.user_id, required this.code});
+  VerifyEvent({required this.userId, required this.code});
 }

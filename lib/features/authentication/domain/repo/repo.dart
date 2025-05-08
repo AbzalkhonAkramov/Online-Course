@@ -6,5 +6,5 @@ abstract class AuthRepository{
   Future<GetUser> registerwithEmail({required password , required email});
 
   //verify code
-  Future<AuthToken> verifyCode({required code ,required user_id});
+  Future<AuthToken> verifyCode({required code ,required userId});
 }

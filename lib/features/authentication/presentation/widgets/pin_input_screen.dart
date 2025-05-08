@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class PinInputScreen extends StatefulWidget {
-  PinInputScreen({super.key,required this.passcodeController,});
+   PinInputScreen({super.key,required this.passcodeController,});
   TextEditingController passcodeController;
   @override
   State<PinInputScreen> createState() => _PinInputScreenState();
@@ -37,7 +37,7 @@ class _PinInputScreenState extends State<PinInputScreen> {
       ),
       enableActiveFill: true,
       onChanged: (value) {
-        print(value);
+        // print(value);
       },
     );
   }

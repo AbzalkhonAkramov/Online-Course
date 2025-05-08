@@ -5,7 +5,7 @@ import 'package:osnv/features/authentication/data/model/user_get_model.dart';
 abstract class AuthRemoteDatasourse {
   Future<UserGetModel> registerwithEmail({required password, required email});
 
-  Future<AuthTokenModel> verifyCode({required code, required user_id});
+  Future<AuthTokenModel> verifyCode({required code, required userId});
 }
 
 class AuthRemoteDatasourseImpl extends AuthRemoteDatasourse {
@@ -31,10 +31,10 @@ class AuthRemoteDatasourseImpl extends AuthRemoteDatasourse {
   }
 
   @override
-  Future<AuthTokenModel> verifyCode({required code, required user_id}) async {
+  Future<AuthTokenModel> verifyCode({required code, required userId}) async {
     final response = await dio.post(
       "https://manuchehra.pythonanywhere.com/api/auth/confirm-email/",
-      data: {"user_id": user_id, "code": code},
+      data: {"user_id": userId, "code": code},
       options: Options(headers: {'Content-Type': 'application/json'}),
     );
     if (response.statusCode == 200 || response.statusCode == 201) {
